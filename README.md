@@ -1,5 +1,7 @@
 # Das Diagramm aus Daten lernen: Was PC findet und was offen bleibt – Streamlit-Demo
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-strukturlernen-demo.streamlit.app/)**
+
 Dreizehntes Stück der Linie **Kausale Diagramme und Adjustierung** in der „Konzepte“-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) (Operations Research und Machine Learning). Nachfolger von [uebertragbarkeit-demo](https://github.com/sebastian-hanisch/uebertragbarkeit-demo): Die Stücke davor setzen das Diagramm **voraus**. Hier soll es aus Messungen entstehen, und die Demo zeigt, bis wohin das gelingt.
 
 ## Kernfrage
@@ -106,4 +108,4 @@ Streamlit Cloud: Python 3.12.
 
 Gebaut mit Streamlit, Plotly, numpy, pandas und fpdf2.
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Kausale Diagramme: von Konfundierung bis Wahl](https://sebastianhanisch.net/konzepte-kausale-diagramme.html).
