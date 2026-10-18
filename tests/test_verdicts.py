@@ -84,7 +84,7 @@ def test_sample_verdict(small_sample):
 
 def test_open_verdict(small_open):
     kind, text = ev.verdict_open(small_open)
-    assert kind == "info" and "In der Welt passen 3 Diagramme; die Wirkung ist 0,60 oder 0,98 (Wahrheit 0,60)" in text and "mehr Daten verengen ihn nicht" in text and "die Wirkung 0,60" in text and "Breite 0,00" in text
+    assert kind == "info" and "In der Welt passen 3 Diagramme; die Wirkung ist 0,60 oder 0,98 (Wahrheit 0,60)" in text and "mehr Daten verengen ihn in dieser Welt nicht" in text and "die Wirkung 0,60" in text and "Breite 0,00" in text
 
 
 def test_assumption_verdict(small_assumptions):

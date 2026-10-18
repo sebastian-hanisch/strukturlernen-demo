@@ -61,5 +61,5 @@ PRESET_HELP = {
     "Mit Vorwissen": "Saison und Wetter sind Ursachen, nichts wirkt auf sie: Das richtet S → Z und, über die Meek-Regeln, Z → X. Aus dem Bereich wird eine Zahl.",
     "Nachfrage verborgen": "Die Nachfrage ist nicht gemessen: PC gibt einen Graphen aus (X → Y gerichtet), dessen Wirkungsbereich die Wahrheit nicht enthält. Die Ausgabe selbst warnt nicht; rot ist nur zu sehen, weil die Wahrheit hier bekannt ist.",
     "Aufgehobener Umweg": "Der direkte Pfeil Z → Y hebt den Umweg über X auf: Z und Y sind unkorreliert, PC entfernt die Kante und setzt Z → X ← Y, ein falscher Collider.",
-    "Nichtlineare Kante": "Z wirkt quadratisch auf Y (symmetrisch, lineare Korrelation 0): Der Fisher-z-Test sieht die Kante nicht, auch bei vielen Daten nicht.",
+    "Nichtlineare Kante": "Z wirkt quadratisch auf Y (symmetrisch): Gegeben den Faktor ist die lineare Teilkorrelation von Z und Y null, der Fisher-z-Test sieht die Kante nicht, auch bei vielen Daten nicht.",
 }

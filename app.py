@@ -119,7 +119,7 @@ st.title("🔍 Das Diagramm aus Daten lernen")
 st.markdown(
     """
 **Kann man das Diagramm aus den Daten lesen?** Dies ist das dreizehnte Stück der Linie **Kausale Diagramme und Adjustierung**. Die Stücke davor haben das Diagramm **vorausgesetzt**; hier soll es aus Messungen entstehen.
-Der **PC-Algorithmus** testet, welche Größen gegeben welche anderen unabhängig sind, wirft die Kanten dazu hinaus und richtet die Pfeile, die sich aus **v-Strukturen** (Collidern) ergeben. Mehr verraten die Daten nicht:
+Der **PC-Algorithmus** testet, welche Größen gegeben welche anderen unabhängig sind, wirft die Kanten dazu hinaus und richtet die Pfeile, die sich aus **v-Strukturen** (Collidern) ergeben. Mehr verraten Unabhängigkeitstests bei linear-gaußschen Daten nicht:
 Es bleibt eine **Äquivalenzklasse** von Diagrammen, und die Wirkung des Faktors ist dann ein **Bereich** statt einer Zahl. Ob die Klasse stimmt, hängt an Annahmen, die leise brechen.
 
 Weiter unten: der **Baukasten für Äquivalenzklassen**, vier Experimente (**🔬**), **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.
@@ -165,7 +165,7 @@ with st.sidebar:
     knowledge = st.radio("Vorwissen", C.KNOWLEDGE, key="knowledge_radio", help="Wurzeln: Nichts wirkt auf Saison und Wetter. Das richtet ihre Kanten nach außen.")
     st.markdown("**Was PC sieht**")
     observed = st.radio("Nachfrage gemessen?", C.YES_NO, key="observed_radio", help="Bei „nein“ fehlt die Spalte der Nachfrage: eine verborgene Ursache von Faktor und Servicegrad.")
-    form = st.radio("Form des Pfeils Nachfrage → Servicegrad", C.FORMS, key="form_radio", help="Quadratisch: symmetrisch um null, die lineare Korrelation ist null. Der Test sieht nur Linearität.")
+    form = st.radio("Form des Pfeils Nachfrage → Servicegrad", C.FORMS, key="form_radio", help="Quadratisch: symmetrisch um null, gegeben den Faktor ist die lineare Teilkorrelation null. Der Test sieht nur Linearität.")
     seed = st.number_input("Zufalls-Seed der Stichprobe", *bounds("seed_input"), key="seed_input", step=1)
     st.button("🎲 Neue Stichprobe würfeln", width="stretch", on_click=randomize_seed)
 
@@ -296,7 +296,7 @@ st.markdown(
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Treue: Unabhängigkeiten stammen nur aus dem Diagramm** | Hebt sich ein Umweg zufällig auf oder ist eine Kante fast untreu, fehlt sie, und PC setzt einen Collider, den es nicht gibt (Experimente 1 und 3). | Sensitivität und Falsifikation |
-| **Linear und Gauß (Fisher-z-Test)** | Eine nichtlineare Kante ohne lineare Korrelation bleibt unsichtbar, auch bei vielen Daten (Experiment 3). | nicht gebaut |
+| **Linear und Gauß (Fisher-z-Test)** | Eine nichtlineare Kante ohne lineare Teilkorrelation bleibt unsichtbar, auch bei vielen Daten (Experiment 3). | nicht gebaut |
 | **Alles Wichtige ist gemessen** | Eine verborgene Ursache gibt einen sauber gerichteten Graphen mit einem Wirkungsbereich, der die Wahrheit nicht enthält (Experiment 3). | Wann geht es gar nicht? |
 | **Die Klasse genügt** | Ungerichtete Kanten bleiben, die Wirkung ist ein Bereich; mehr Daten ändern das nicht, Vorwissen schon (Experiment 2). | Kontinuierliches Strukturlernen; Über die Äquivalenzklasse hinaus |
 | **Die Reihenfolge der Variablen ist gleich** | Das Skelett der stabilen Fassung ist unabhängig, die Orientierung nicht (Experiment 4). | nicht gebaut |
@@ -324,7 +324,7 @@ wenn $k$ nicht in der Trennmenge von $i, j$ liegt. **Meek-Regeln:** R1: $a \to b
 
 **Literatur.** P. Spirtes, C. Glymour, R. Scheines, *Causation, Prediction, and Search*; C. Meek, *Causal inference and causal explanation with background knowledge*, UAI 1995; T. Verma, J. Pearl, *Equivalence and synthesis of causal models*, UAI 1990;
 D. Colombo, M. Maathuis, *Order-independent constraint-based causal structure learning*, JMLR 2014; M. Maathuis, M. Kalisch, P. Bühlmann, *Estimating high-dimensional intervention effects from observational data*, Annals of Statistics 2009
-(alle aus dem Gedächtnis, nicht geprüft).
+(alle aus dem Gedächtnis, nicht geprüft; die Gegenprobe Orakel-PC gegen Aufzählung nutzt denselben Satz von Verma/Pearl).
         """
     )
 

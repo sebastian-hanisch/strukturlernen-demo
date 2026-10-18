@@ -69,7 +69,7 @@ def test_experiment_2_effect_range(full_open):
     assert by[(1000, "ohne")]["lo"] == pytest.approx(0.600, abs=0.0006) and by[(1000, "ohne")]["hi"] == pytest.approx(0.985, abs=0.0006) and by[(1000, "mit Vorwissen")]["lo"] == pytest.approx(0.600, abs=0.0006)
     # Konstruktion: Die Klasse enthält das wahre Diagramm, der Bereich also die Wahrheit (bis auf den Stichprobenfehler); der Befund ist die Breite
     assert all(by[(n, m)]["inside"] >= 0.97 for n in (300, 1000, 3000) for m in ("ohne", "mit Vorwissen"))
-    assert "mehr Daten verengen ihn nicht" in ev.verdict_open(full_open)[1] and "ist die Breite 0,00, die Wirkung 0,60" in ev.verdict_open(full_open)[1]
+    assert "mehr Daten verengen ihn in dieser Welt nicht" in ev.verdict_open(full_open)[1] and "ist die Breite 0,00, die Wirkung 0,60" in ev.verdict_open(full_open)[1]
 
 
 def test_experiment_3_cancellation(full_assumptions):

@@ -427,7 +427,7 @@ def verdict_instance(a: Analysis) -> tuple:
         return "warning", text
     text = f"PC findet die Klasse: {directed} Kanten gerichtet, {undirected} ungerichtet. {rng}; die Wahrheit ist {truth}."
     if a.effects and max(a.effects) - min(a.effects) >= 0.05:
-        text += " Mehr Daten verengen den Bereich nicht, Vorwissen schon."
+        text += " Mehr Daten verengen den Bereich in dieser Welt nicht, Vorwissen schon."
     if s.alpha >= 0.05:
         text += f" (Mit α = {de(s.alpha, 2)} gibt es auch bei vielen Daten gelegentlich eine überzählige Kante.)"
     return "success", text
@@ -460,7 +460,7 @@ def verdict_open(res: dict) -> tuple:
     pop = res["pop_effects"]
     return "info", (f"In Zufalls-DAGs sind {pct(min(shares))} bis {pct(max(shares))} der Kanten des CPDAG ungerichtet (Grad 2, {d_lo} Knoten: {pct(rr[(d_lo, 2.0)]['undirected'])}); vollständig gerichtet sind nur "
                     f"{pct(min(full))} bis {pct(max(full))} der Graphen. In der Welt passen {res['class_size']} Diagramme; die Wirkung ist {de(pop[0], 2)} oder {de(pop[-1], 2)} (Wahrheit {de(res['truth'], 2)}). "
-                    f"Der Bereich ist bei n = {ns[0]} im Mittel {de(ohne[ns[0]]['width'], 2)} breit und bei n = {_n(ns[-1])} {de(ohne[ns[-1]]['width'], 2)}: mehr Daten verengen ihn nicht. Mit Vorwissen "
+                    f"Der Bereich ist bei n = {ns[0]} im Mittel {de(ohne[ns[0]]['width'], 2)} breit und bei n = {_n(ns[-1])} {de(ohne[ns[-1]]['width'], 2)}: mehr Daten verengen ihn in dieser Welt nicht. Mit Vorwissen "
                     f"(Saison und Wetter sind Wurzeln) ist die Breite {de(mit[ns[-1]]['width'], 2)}, die Wirkung {de(res['know_effects'][0], 2)}.")
 
 
